@@ -90,6 +90,29 @@ create table t_brand
 ```
 * t_product
 * t_sku
+
+营销服务
+
+* t_market
+
+```sql
+CREATE TABLE t_coupon (
+    id bigint UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+    created_at datetime NULL,
+    updated_at datetime NULL,
+    deleted_at datetime NULL,
+    use_scope_id bigint COMMENT '使用范围',
+    coupon_type tinyint COMMENT '劵类型',
+    start_time datetime NULL COMMENT '有效期开始时间',
+    end_time datetime NULL COMMENT '有效期结束时间',
+    total_stock bigint NULL COMMENT '报名的总库存',
+    real_stock bigint NULL COMMENT '当前库存',
+    coupon_name varchar(128) COMMENT '劵名称',
+    limit_low_price bigint COMMENT '使用条件',
+    reduce_price bigint COMMENT '满减的价格规则'
+);
+```
+
 ## api接口文档
 使用swagger进行接口文档管理&接口测试：`http://localhost:8080/swagger/index.html#/`
 ## 启动服务

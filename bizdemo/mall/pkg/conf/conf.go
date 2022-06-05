@@ -24,6 +24,7 @@ const (
 	AttributeTableName         = "t_attribute"
 	ShopCategoryTableName      = "t_shop_category"
 	CategoryAttributeTableName = "t_category_attribute"
+	MarketTableName            = "t_market"
 
 	SecretKey   = "secret key"
 	IdentityKey = "id"
@@ -34,4 +35,5 @@ const (
 	UserRpcServiceName    = "cmp.ecom.user"
 	ShopRpcServiceName    = "cmp.ecom.shop"
 	ProductRpcServiceName = "cmp.ecom.product"
+	MarketRpcServiceName  = "cmp.ecom.market"
 )

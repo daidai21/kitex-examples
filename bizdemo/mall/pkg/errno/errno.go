@@ -37,6 +37,10 @@ const (
 
 	// Product Errcode
 	BrandNotExistErrCode = 12001
+
+	// Market ErrCode
+	CouponNotExistErrCode     = 14001
+	CouponAlreadyExistErrCode = 14002
 )
 
 type ErrNo struct {
@@ -67,6 +71,9 @@ var (
 	ShopAlreadyExistErr = NewErrNo(ShopAlreadyExistErrCode, "Shop has been settled")
 	ShopNotExistErr     = NewErrNo(ShopNotExistErrCode, "User has not settle a shop yet")
 	BrandNotExistErr    = NewErrNo(BrandNotExistErrCode, "Brand is not exist")
+
+	CouponNotExistErr     = NewErrNo(CouponNotExistErrCode, "Coupon is not exist")
+	CouponAlreadyExistErr = NewErrNo(CouponAlreadyExistErrCode, "Coupon already exists")
 )
 
 // ConvertErr convert error to Errno
